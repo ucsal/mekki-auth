@@ -23,7 +23,7 @@ public class TokenAuthenticator {
     public static String generateToken(UserTO user) {
         try {
             Map<String, Object> claims = new HashMap<>();
-            claims.put("username", user.getUsername());
+            claims.put("username", user.getId());
             claims.put("school", user.getSchool());
             claims.put("roles", String.join(",", user.getRoles()));
 
